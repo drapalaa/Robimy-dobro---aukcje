@@ -22,7 +22,7 @@ const UpdateButtonSaveStyle = (theme: Theme) => ({
     }
 });
 
-const UpdateButtonCancelStyle = (theme: Theme) => ({
+const UpdateButtonCancelStyle = () => ({
     borderRadius: '45px',
     fontWeight: 600,
     textTransform: 'none',
@@ -47,13 +47,9 @@ export const UpdateActionButtonSave = ({label, onClick}: UpdateActionButtonProps
 };
 
 export const UpdateActionButtonCancel = ({label, onClick}: UpdateActionButtonProps) => {
-    const theme = useTheme();
-
     return (
-        <Button variant="outlined" color="inherit" onClick={onClick} sx={UpdateButtonCancelStyle(theme)}>
+        <Button variant="outlined" color="inherit" onClick={onClick} sx={UpdateButtonCancelStyle()}>
             {label}
         </Button>
     );
 };
-
-// export default UpdateActionButtonSave;
